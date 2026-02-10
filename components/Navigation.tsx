@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const categories = [
     {
@@ -43,7 +44,8 @@ const categories = [
 ];
 
 export default function Navigation() {
-    const [isOpen, setIsOpen] = useState(true);
+    const pathname = usePathname();
+    const isHomePage = pathname === '/';
     const [isMobileOpen, setIsMobileOpen] = useState(false);
 
     return (
@@ -74,7 +76,11 @@ export default function Navigation() {
 
                     <div className="space-y-2">
                         {categories.map((category) => (
-                            <CategoryItem key={category.slug} category={category} />
+                            <CategoryItem 
+                                key={category.slug} 
+                                category={category}
+                                defaultExpanded={!isHomePage}
+                            />
                         ))}
                     </div>
                 </div>
@@ -91,8 +97,14 @@ export default function Navigation() {
     );
 }
 
-function CategoryItem({ category }: { category: typeof categories[0] }) {
-    const [isExpanded, setIsExpanded] = useState(false);
+function CategoryItem({ 
+    category, 
+    defaultExpanded = false 
+}: { 
+    category: typeof categories[0];
+    defaultExpanded?: boolean;
+}) {
+    const [isExpanded, setIsExpanded] = useState(defaultExpanded);
 
     return (
         <div>
