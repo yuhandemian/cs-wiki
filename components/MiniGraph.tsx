@@ -33,8 +33,7 @@ export default function MiniGraph({ currentSlug, categorySlug }: MiniGraphProps)
     const [relatedNodes, setRelatedNodes] = useState<MiniGraphNode[]>([]);
 
     useEffect(() => {
-        const basePath = process.env.NODE_ENV === 'production' ? '/cs-wiki' : '';
-        fetch(`${basePath}/graph-data.json`)
+        fetch('/graph-data.json')
             .then(res => res.json())
             .then((data: GraphData) => {
                 const currentId = `${categorySlug}/${currentSlug}`;
