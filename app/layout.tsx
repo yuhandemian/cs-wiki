@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
+import Navigation, { NavProvider } from "@/components/Navigation";
 import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,18 +19,20 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={inter.className}>
-        <div className="flex min-h-screen">
-          {/* 좌측 네비게이션 */}
-          <Navigation />
-          
-          {/* 메인 콘텐츠 */}
-          <div className="flex-1 flex flex-col">
-            <Header />
-            <main className="flex-1 p-8">
-              {children}
-            </main>
+        <NavProvider>
+          <div className="flex min-h-screen">
+            {/* 좌측 네비게이션 */}
+            <Navigation />
+            
+            {/* 메인 콘텐츠 */}
+            <div className="flex-1 flex flex-col">
+              <Header />
+              <main className="flex-1 p-8">
+                {children}
+              </main>
+            </div>
           </div>
-        </div>
+        </NavProvider>
       </body>
     </html>
   );

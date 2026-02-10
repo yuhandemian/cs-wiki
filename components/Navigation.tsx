@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
+import { useState, useEffect, createContext, useContext } from "react";
+import { ChevronDown, ChevronRight, Menu, X, PanelLeftClose, PanelLeft } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const categories = [
@@ -43,15 +43,39 @@ const categories = [
     },
 ];
 
-export default function Navigation() {
+const NavContext = createContext<{
+    isNavOpen: boolean;
+    setIsNavOpen: (open: boolean) => void;
+}>({
+    isNavOpen: true,
+    setIsNavOpen: () => {},
+});
+
+export function NavProvider({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
     const isHomePage = pathname === '/';
-    const [isMobileOpen, setIsMobileOpen] = useState(false);
     const [isNavOpen, setIsNavOpen] = useState(!isHomePage);
 
     useEffect(() => {
         setIsNavOpen(!isHomePage);
     }, [isHomePage]);
+
+    return (
+        <NavContext.Provider value={{ isNavOpen, setIsNavOpen }}>
+            {children}
+        </NavContext.Provider>
+    );
+}
+
+export function useNav() {
+    return useContext(NavContext);
+}
+
+export default function Navigation() {
+    const pathname = usePathname();
+    const isHomePage = pathname === '/';
+    const [isMobileOpen, setIsMobileOpen] = useState(false);
+    const { isNavOpen, setIsNavOpen } = useNav();
 
     return (
         <>
@@ -67,20 +91,16 @@ export default function Navigation() {
             <button
                 onClick={() => setIsNavOpen(!isNavOpen)}
                 className="hidden md:block fixed top-4 left-4 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                title={isNavOpen ? "사이드바 접기" : "사이드바 펼치기"}
             >
-                {isNavOpen ? <X size={20} /> : <Menu size={20} />}
+                {isNavOpen ? <PanelLeftClose size={20} /> : <PanelLeft size={20} />}
             </button>
 
             {/* 네비게이션 */}
             <nav
-                className={`
-          ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
-          md:${isNavOpen ? "translate-x-0" : "-translate-x-full"}
-          fixed md:sticky top-0 left-0 h-screen
-          w-64 bg-gray-50 dark:bg-gray-900 border-r
-          transition-transform duration-300 ease-in-out
-          overflow-y-auto z-40
-        `}
+                className={`fixed md:sticky top-0 left-0 h-screen w-64 bg-gray-50 dark:bg-gray-900 border-r transition-all duration-300 ease-in-out overflow-y-auto z-40 ${
+                    isMobileOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+                } ${!isNavOpen ? "md:-ml-64" : ""}`}
             >
                 <div className="p-6 pt-16 md:pt-6">
                     <Link href="/" className="block mb-8">
