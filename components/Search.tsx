@@ -26,7 +26,7 @@ export default function Search() {
     const searchRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const basePath = process.env.NODE_ENV === 'production' ? '/cs-wiki' : '';
+        const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
         fetch(`${basePath}/search-index.json`)
             .then(res => res.json())
             .then((data: SearchData) => {

@@ -65,7 +65,8 @@ export default function ForceGraph() {
     }, []);
 
     useEffect(() => {
-        fetch('/graph-data.json')
+        const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+        fetch(`${basePath}/graph-data.json`)
             .then(res => res.json())
             .then(setGraphData)
             .catch(console.error);
