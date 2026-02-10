@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   output: 'export',
 
   basePath: isProd ? '/cs-wiki' : '',
+  assetPrefix: isProd ? '/cs-wiki' : '',
 
   images: {
     unoptimized: true,
