@@ -201,7 +201,7 @@ Paging의 문제점은 첫째, Page Table 크기가 매우 클 수 있습니다.
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_paging.md`
+- 파일: [os_paging.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_paging.md)
 - 내용: Paging, Page Table, 주소 변환
 
 ### 추가 학습 자료

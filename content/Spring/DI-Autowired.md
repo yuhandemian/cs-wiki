@@ -388,7 +388,7 @@ SOLID는 객체 지향 프로그래밍의 5가지 설계 원칙입니다.
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/spring/spring_@Autowired.md`
+- 링크: [spring_@Autowired.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Spring/spring_@Autowired.md)
 - 내용: DI, SOLID, @Autowired, 주입 방법
 
 ### 추가 학습 자료

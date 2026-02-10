@@ -229,5 +229,5 @@ LAN은 근거리 통신망으로 같은 건물이나 캠퍼스 같은 좁은 공
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/network/network_basic.md`
+- 링크: [network_basic.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_basic.md)
 - 내용: 네트워크 기초, 처리량, 지연시간, 명령어

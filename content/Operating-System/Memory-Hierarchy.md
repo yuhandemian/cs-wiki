@@ -320,7 +320,7 @@ DRAM은 동적 메모리로 전원이 공급되어도 주기적으로 재충전�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_memory_hierarchy.md`
+- 파일: [os_memory_hierarchy.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_memory_hierarchy.md)
 - 내용: 메모리 계층 구조, 레지스터, 캐시, RAM, ROM
 
 ### 추가 학습 자료

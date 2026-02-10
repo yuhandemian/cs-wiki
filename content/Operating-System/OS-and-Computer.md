@@ -285,7 +285,7 @@ CPU는 산술논리연산장치(ALU), 제어장치(CU), 레지스터로 구성�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_os_and_computer.md`
+- 파일: [os_os_and_computer.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_os_and_computer.md)
 - 내용: 운영체제 역할, 시스템 콜, Mode Bit, CPU, 인터럽트
 
 ### 추가 학습 자료

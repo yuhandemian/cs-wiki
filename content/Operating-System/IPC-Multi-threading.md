@@ -269,5 +269,5 @@ Thread는 Code, Data, Heap을 공유하고 Stack만 개별적으로 가지기 �
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_multi_procsss_thread_multi_thread.md`
+- 파일: [os_multi_procsss_thread_multi_thread.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_multi_procsss_thread_multi_thread.md)
 - 내용: Multi-processing, IPC, Thread, Multi-threading

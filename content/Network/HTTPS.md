@@ -168,7 +168,7 @@ HTTPS는 인터넷 상에서 정보를 암호화하는 TLS 프로토콜을 사�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/network/network_https.md`
+- 링크: [network_https.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_https.md)
 - 내용: HTTPS, TLS, 암호화, TLS Handshake
 
 ### 추가 학습 자료

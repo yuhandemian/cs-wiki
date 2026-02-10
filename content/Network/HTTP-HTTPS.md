@@ -257,11 +257,11 @@ TCP는 신뢰성 보장을 위해 흐름 제어와 혼잡 제어를 수행하는
 ## 📚 원본 참고 자료
 
 ### 출처 1: 2023-CS-Study - HTTP 진화
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Network/network_http.md`
+- 링크: [network_http.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_http.md)
 - 내용: HTTP/0.9부터 HTTP/3까지 진화 과정, 각 버전별 특징
 
 ### 출처 2: 2023-CS-Study - HTTPS
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Network/network_https.md`
+- 링크: [network_https.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_https.md)
 - 내용: TLS/SSL, 암호화 방식, TLS Handshake 과정
 
 ### 출처 3: backend-interview-question

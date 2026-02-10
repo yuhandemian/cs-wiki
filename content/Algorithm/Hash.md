@@ -334,5 +334,5 @@ Hashtable은 동기화를 보장하여 멀티스레드 환경에서 안전하지
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Algorithm/algorithm_hash.md`
+- 링크: [algorithm_hash.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Algorithm/algorithm_hash.md)
 - 내용: Hash, HashMap, HashSet, Hash Table, Collision 해결

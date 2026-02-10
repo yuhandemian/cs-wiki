@@ -311,7 +311,7 @@ Tree 자료구조를 기반으로 하여 검색 기능에 특화되어 있으며
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_collection_framework.md`
+- 링크: [java_collection_framework.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_collection_framework.md)
 - 내용: Collection 구조, List/Set/Map, Stack/Queue
 
 ### 추가 학습 자료

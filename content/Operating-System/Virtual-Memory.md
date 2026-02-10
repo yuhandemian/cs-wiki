@@ -362,7 +362,7 @@ p = Page Fault율
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_virtual_memory_and_demand_paging.md`
+- 파일: [os_virtual_memory_and_demand_paging.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_virtual_memory_and_demand_paging.md)
 - 내용: 가상 메모리, 요구 페이징, 페이지 교체
 
 ### 추가 학습 자료

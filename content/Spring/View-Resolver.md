@@ -215,7 +215,7 @@ View Resolver는 Controller가 실행되고 ModelAndView를 반환한 후 동작
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/spring/spring_view_resolver.md`
+- 링크: [spring_view_resolver.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Spring/spring_view_resolver.md)
 - 내용: View Resolver, 종류, 동작 순서
 
 ### 추가 학습 자료

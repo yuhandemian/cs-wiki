@@ -254,7 +254,7 @@ Address Space(주소 공간)는 OS가 실제 메모리를 추상화하여 현재
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_address_space.md`
+- 파일: [os_address_space.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_address_space.md)
 - 내용: Address Space, 메모리 가상화, Virtual Memory
 
 ### 추가 학습 자료

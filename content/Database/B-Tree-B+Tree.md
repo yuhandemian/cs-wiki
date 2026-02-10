@@ -250,7 +250,7 @@ B+Tree는 모든 데이터가 Leaf node에만 저장되어 있고 Leaf node끼�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_b_tree_b+tree.md`
+- 링크: [db_b_tree_b+tree.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_b_tree_b+tree.md)
 - 내용: B-Tree, B+Tree, 삽입/삭제
 
 ### 추가 학습 자료

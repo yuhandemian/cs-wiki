@@ -314,11 +314,11 @@ LRU는 가장 오래 사용되지 않은 Page를 교체하는 알고리즘입니
 ## 📚 원본 참고 자료
 
 ### 출처 1: 2023-CS-Study - 가상 메모리
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_virtual_memory_and_demand_paging.md`
+- 파일: [os_virtual_memory_and_demand_paging.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_virtual_memory_and_demand_paging.md)
 - 내용: 가상 메모리, 요구 페이징, 페이지 교체 알고리즘
 
 ### 출처 2: 2023-CS-Study - 페이징
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_paging.md`
+- 파일: [os_paging.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_paging.md)
 - 내용: 페이징 개념, Page Table, 주소 변환
 
 ### 추가 학습 자료

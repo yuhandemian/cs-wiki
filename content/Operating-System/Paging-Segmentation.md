@@ -319,8 +319,8 @@ Paging은 고정 크기로 분할하여 내부 단편화가 발생하지만 관�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_segmentation.md`
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_paging.md`
+- 파일: [os_segmentation.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_segmentation.md)
+- 파일: [os_paging.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_paging.md)
 - 내용: Segmentation, Paging, 주소 변환, 단편화
 
 ### 추가 학습 자료

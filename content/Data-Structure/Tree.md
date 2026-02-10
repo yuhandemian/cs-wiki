@@ -337,7 +337,7 @@ BFS는 레벨 순서로 탐색하여 최단 경로를 찾는 데 유리하지만
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Algorithm/algorithm_tree.md`
+- 링크: [algorithm_tree.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/algorithm/algorithm_tree.md)
 - 내용: 트리 개념, BST, Heap, BFS/DFS, 순회
 
 ### 추가 학습 자료

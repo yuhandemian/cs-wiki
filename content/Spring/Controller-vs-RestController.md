@@ -155,7 +155,7 @@ HttpMessageConverter는 @ResponseBody 어노테이션이 사용되거나 @RestCo
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/spring/spring_controller_vs_rest_controller.md`
+- 링크: [spring_controller_vs_rest_controller.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Spring/spring_controller_vs_rest_controller.md)
 - 내용: @Controller, @RestController, 차이점
 
 ### 추가 학습 자료

@@ -407,7 +407,7 @@ Type Erasure로 Object로 변환되기 때문에 T는 결국 Object와 다르지
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_generic.md`
+- 링크: [java_generic.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_generic.md)
 - 내용: Generic 개념, 클래스/메서드, extends/super, 와일드카드
 
 ### 추가 학습 자료

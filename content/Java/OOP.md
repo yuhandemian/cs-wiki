@@ -325,7 +325,7 @@ public class Client {
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_object_oriented.md`
+- 링크: [java_object_oriented.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_object_oriented.md)
 - 내용: OOP 4대 특징, 예시 코드
 
 ### 추가 학습 자료

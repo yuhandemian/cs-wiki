@@ -394,7 +394,7 @@ REST 아키텍처 스타일을 올바르게 지킨 API를 의미합니다. URI �
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Network/network_rest_api_restful.md`
+- 링크: [network_rest_api_restful.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_rest_api_restful.md)
 - 내용: REST, REST API, RESTful, HTTP Method
 
 ### 추가 학습 자료

@@ -339,8 +339,8 @@ Spring Boot는 Spring을 더 쉽게 사용할 수 있도록 만든 프레임워�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/spring/spring_psa_ioc_aop_pojo.md`
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/spring/spring vs spring boot.md`
+- 링크: [spring_psa_ioc_aop_pojo.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Spring/spring_psa_ioc_aop_pojo.md)
+- 링크: [spring vs spring boot.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Spring/spring%20vs%20spring%20boot.md)
 - 내용: POJO, PSA, IoC, DI, AOP, Spring vs Spring Boot
 
 ### 추가 학습 자료

@@ -222,7 +222,7 @@ UDP 자체는 신뢰성을 보장하지 않지만, 애플리케이션 레벨에�
 ## 📚 원본 참고 자료
 
 ### 출처 1: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Network/network_tcp_and_udp.md`
+- 링크: [network_tcp_and_udp.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_tcp_and_udp.md)
 - 내용: TCP/UDP 기본 개념, 3-way/4-way handshake, 패킷 교환 방식
 
 ### 출처 2: backend-interview-question

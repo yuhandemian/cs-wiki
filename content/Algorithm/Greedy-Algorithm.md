@@ -203,7 +203,7 @@ tags: []
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Algorithm/algorithm_greedy.md`
+- 링크: [algorithm_greedy.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Algorithm/algorithm_greedy.md)
 - 내용: 그리디 개념, 조건, 예시 문제
 
 ### 추가 학습 자료

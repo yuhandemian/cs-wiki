@@ -195,5 +195,5 @@ ERD는 설계도이고 스키마는 구현입니다. ERD는 데이터베이스�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_schema.md`
+- 링크: [db_schema.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_schema.md)
 - 내용: Schema, 3계층, ERD

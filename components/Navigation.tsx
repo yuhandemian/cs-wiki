@@ -42,15 +42,6 @@ export default function Navigation() {
                 {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
 
-            {/* 데스크톱 토글 버튼 */}
-            <button
-                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="hidden md:block fixed top-4 left-4 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                title={isSidebarOpen ? "사이드바 숨기기" : "사이드바 표시"}
-            >
-                <Menu size={20} />
-            </button>
-
             {/* 사이드바 */}
             <aside
                 className={`
@@ -61,9 +52,20 @@ export default function Navigation() {
                 `}
             >
                 <div className={`w-64 p-6 pt-16 md:pt-6 transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100' : 'md:opacity-0'}`}>
-                    <Link href="/" className="block mb-8" onClick={() => setIsMobileOpen(false)}>
-                        <h1 className="text-2xl font-bold">CS Wiki</h1>
-                    </Link>
+                    <div className="flex items-center justify-between mb-8">
+                        <Link href="/" className="block" onClick={() => setIsMobileOpen(false)}>
+                            <h1 className="text-2xl font-bold">CS Wiki</h1>
+                        </Link>
+                        
+                        {/* 데스크톱 토글 버튼 */}
+                        <button
+                            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                            className="hidden md:block p-2 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                            title={isSidebarOpen ? "사이드바 숨기기" : "사이드바 표시"}
+                        >
+                            <Menu size={20} />
+                        </button>
+                    </div>
 
                     <nav className="space-y-2">
                         {categories.map((category) => (

@@ -310,7 +310,7 @@ Spring AOP는 Proxy 패턴을 기반으로 동작합니다. Client가 메서드�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/spring/spring_psa_ioc_aop_pojo.md`
+- 링크: [spring_psa_ioc_aop_pojo.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Spring/spring_psa_ioc_aop_pojo.md)
 - 내용: AOP 개념, 횡단 관심사
 
 ### 추가 학습 자료

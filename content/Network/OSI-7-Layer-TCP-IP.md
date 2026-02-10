@@ -228,7 +228,7 @@ L4 스위치는 전송 계층에서 동작하여 TCP/UDP 포트 정보를 기반
 ## 📚 원본 참고 자료
 
 ### 출처 1: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Network/network_osi_7_layer.md`
+- 링크: [network_osi_7_layer.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_osi_7_layer.md)
 - 내용: OSI 7계층 각 계층 설명, TCP/IP 4계층 비교
 
 ### 출처 2: backend-interview-question

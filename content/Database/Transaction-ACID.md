@@ -288,7 +288,7 @@ Commit은 Transaction의 모든 작업을 DB에 영구적으로 저장하고 Tra
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_transaction_and_acid.md`
+- 링크: [db_transaction_and_acid.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_transaction_and_acid.md)
 - 내용: Transaction 개념, ACID 속성, 예시
 
 ### 추가 학습 자료

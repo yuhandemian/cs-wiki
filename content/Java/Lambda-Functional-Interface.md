@@ -329,11 +329,11 @@ Method Reference는 함수형 인터페이스를 Lambda식이 아닌 일반 메�
 ## 📚 원본 참고 자료
 
 ### 출처 1: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_lamda_functional-interface.md`
+- 링크: [java_lamda_functional-interface.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_lamda_functional-interface.md)
 - 내용: Lambda, Functional Interface, Method Reference
 
 ### 출처 2: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_eight_characteristic.md`
+- 링크: [java_eight_characteristic.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_eight_characteristic.md)
 - 내용: Java 8 Lambda 특징
 
 ### 추가 학습 자료

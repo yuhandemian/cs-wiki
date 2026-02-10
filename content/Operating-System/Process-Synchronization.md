@@ -410,7 +410,7 @@ TestAndSet은 CPU atomic 명령어로 실행 중간에 간섭받거나 중단되
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_process_synchronization.md`
+- 파일: [os_process_synchronization.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_process_synchronization.md)
 - 내용: Process Synchronization, Mutex, Semaphore
 
 ### 추가 학습 자료

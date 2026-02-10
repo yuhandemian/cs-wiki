@@ -372,7 +372,7 @@ G1 GC는 Heap을 바둑판처럼 Region으로 나누어 관리하며, 가장 많
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_gc.md`
+- 링크: [java_gc.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_gc.md)
 - 내용: Garbage Collection, GC 알고리즘, Heap 구조
 
 ### 추가 학습 자료

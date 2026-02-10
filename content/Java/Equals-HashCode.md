@@ -314,7 +314,7 @@ Objects.hash() 메서드는 간편하게 hashCode를 재정의할 수 있는 장
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_equals_hashcode.md`
+- 링크: [java_equals_hashcode.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_equals_hashcode.md)
 - 내용: Object 클래스, equals, hashCode, Hash Collection
 
 ### 추가 학습 자료

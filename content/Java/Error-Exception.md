@@ -312,7 +312,7 @@ NullPointerException (null 객체 사용), ArrayIndexOutOfBoundsException (배�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_error_vs_exception.md`
+- 링크: [java_error_vs_exception.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_error_vs_exception.md)
 - 내용: Error, Exception, Checked/Unchecked, 예외 처리
 
 ### 추가 학습 자료

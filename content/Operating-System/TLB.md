@@ -230,7 +230,7 @@ TLB Miss가 발생하면 주기억장치 내부의 페이지 테이블을 탐색
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_tlb.md`
+- 파일: [os_tlb.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_tlb.md)
 - 내용: TLB, VPN, PPN, ASID
 
 ### 추가 학습 자료

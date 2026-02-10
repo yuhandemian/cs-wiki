@@ -381,7 +381,7 @@ String은 Immutable 객체로 변경 시 새 객체를 생성합니다. StringBu
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_mutable_immutable.md`
+- 링크: [java_mutable_immutable.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_mutable_immutable.md)
 - 내용: Mutable/Immutable, String/StringBuilder/StringBuffer, 방어적 복사
 
 ### 추가 학습 자료

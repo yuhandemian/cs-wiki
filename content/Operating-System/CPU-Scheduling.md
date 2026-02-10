@@ -403,7 +403,7 @@ Aging 기법을 사용합니다. 프로세스가 Ready Queue에서 대기하는 
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_cpu_scheduling_and_algorithm.md`
+- 파일: [os_cpu_scheduling_and_algorithm.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_cpu_scheduling_and_algorithm.md)
 - 내용: CPU 스케줄링 개념, 알고리즘, 성능 척도
 
 ### 추가 학습 자료

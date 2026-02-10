@@ -304,7 +304,7 @@ ERD(Entity Relationship Diagram)는 요구 분석 사항에서 얻은 엔티티�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_erd_normalization.md`
+- 링크: [db_erd_normalization.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_erd_normalization.md)
 - 내용: ERD, Normalization, Entity, Relationship
 
 ### 추가 학습 자료

@@ -296,7 +296,7 @@ Deadlock은 프로세스들이 서로의 자원을 기다리며 순환 대기 �
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_deadLock.md`
+- 파일: [os_deadLock.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_deadLock.md)
 - 내용: Deadlock 개념, 발생 조건, 처리 방법, Java 예시
 
 ### 추가 학습 자료

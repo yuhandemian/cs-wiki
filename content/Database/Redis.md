@@ -266,5 +266,5 @@ Write Back은 데이터를 Cache에만 저장하고 일정 기간 후 DB에 일�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_redis.md`
+- 링크: [db_redis.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_redis.md)
 - 내용: Redis, Cache 전략, 영속성

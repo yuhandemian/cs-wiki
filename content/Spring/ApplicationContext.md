@@ -215,7 +215,7 @@ ApplicationContext는 EnvironmentCapable(환경 설정), ListableBeanFactory(빈
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/spring/spring_ApplicationContext.md`
+- 링크: [spring_ApplicationContext.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Spring/spring_ApplicationContext.md)
 - 내용: ApplicationContext, BeanFactory, Spring IoC Container
 
 ### 추가 학습 자료

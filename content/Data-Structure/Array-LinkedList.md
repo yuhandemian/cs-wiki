@@ -282,7 +282,7 @@ void deleteNode(listPointer *first, int data) {
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Algorithm/algorithm_linkedlist.md`
+- 링크: [algorithm_linkedlist.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/algorithm/algorithm_linkedlist.md)
 - 내용: 연결 리스트 종류, 기본 연산, 구현
 
 ### 추가 학습 자료

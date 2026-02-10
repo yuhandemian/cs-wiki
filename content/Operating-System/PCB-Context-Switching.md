@@ -295,7 +295,7 @@ PCB(Process Control Block)는 프로세스에 대한 정보를 저장한 자료�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_pcb_and_context_switching.md`
+- 파일: [os_pcb_and_context_switching.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_pcb_and_context_switching.md)
 - 내용: PCB, Context Switching, 프로세스 상태
 
 ### 추가 학습 자료

@@ -335,7 +335,7 @@ marin      | sdf90    | 실버     | 900103-1xxxxxx
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_key.md`
+- 링크: [db_key.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_key.md)
 - 내용: Key 종류, 무결성, 유일성/최소성
 
 ### 추가 학습 자료

@@ -218,7 +218,7 @@ HashTable은 구현 변화가 거의 없고 보조 해시 함수를 사용하지
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_hashmap.md`
+- 링크: [java_hashmap.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_hashmap.md)
 - 내용: Hash, HashMap, Hash Collision, Java HashMap
 
 ### 추가 학습 자료

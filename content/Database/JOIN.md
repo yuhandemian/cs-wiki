@@ -418,7 +418,7 @@ Explicit Inner Join은 INNER JOIN 키워드를 명시적으로 사용하고 ON �
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_join.md`
+- 링크: [db_join.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_join.md)
 - 내용: Inner Join, Outer Join, 벤 다이어그램
 
 ### 추가 학습 자료

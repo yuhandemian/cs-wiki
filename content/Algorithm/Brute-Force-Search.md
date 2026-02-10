@@ -276,5 +276,5 @@ n = 100: O(n²) = 10,000
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Algorithm/algorithm_brute_force_search.md`
+- 링크: [algorithm_brute_force_search.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Algorithm/algorithm_brute_force_search.md)
 - 내용: 완전 탐색, 비트마스크, 재귀, 순열, BFS/DFS

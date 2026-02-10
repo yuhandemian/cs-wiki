@@ -273,7 +273,7 @@ Serializable은 트랜잭션을 순차적으로 진행하고 Lock을 걸어 다�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_transaction_isolation_level.md`
+- 링크: [db_transaction_isolation_level.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_transaction_isolation_level.md)
 - 내용: Transaction Isolation Level, Dirty Read, Non-Repeatable Read, Phantom Read
 
 ### 추가 학습 자료

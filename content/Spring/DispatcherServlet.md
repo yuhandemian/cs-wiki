@@ -420,7 +420,7 @@ HandlerMapping은 요청 URL을 분석하여 적절한 Handler(Controller)를 �
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/spring/spring_DispatcherServlet.md`
+- 링크: [spring_DispatcherServlet.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Spring/spring_DispatcherServlet.md)
 - 내용: DispatcherServlet, Front Controller, HandlerMapping/Adapter/ViewResolver
 
 ### 추가 학습 자료

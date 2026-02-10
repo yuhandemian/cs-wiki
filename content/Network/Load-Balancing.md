@@ -356,7 +356,7 @@ L4는 전송 계층에서 IP와 PORT 기반으로 부하를 분산하여 속도�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Network/network_l4_l7_switch_and_load_balancing.md`
+- 링크: [network_l4_l7_switch_and_load_balancing.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_l4_l7_switch_and_load_balancing.md)
 - 내용: 로드밸런싱, L4/L7 스위치, 알고리즘
 
 ### 추가 학습 자료

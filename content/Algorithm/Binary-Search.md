@@ -322,5 +322,5 @@ O(log N)입니다. 단계마다 탐색 범위를 2로 나누는 것과 동일하
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Algorithm/algorithm_binary_search.md`
+- 링크: [algorithm_binary_search.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Algorithm/algorithm_binary_search.md)
 - 내용: 이진 탐색, 시간 복잡도, Parametric Search

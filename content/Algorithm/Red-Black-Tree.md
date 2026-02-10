@@ -343,7 +343,7 @@ AVL Tree는 균형을 더 엄격하게 유지하여 검색 성능이 빠르지�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/algorithm/algorithm_red_black_tree.md`
+- 링크: [algorithm_red_black_tree.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/algorithm/algorithm_red_black_tree.md)
 - 내용: Red-Black Tree, BST, 삽입/삭제, 회전
 
 ### 추가 학습 자료

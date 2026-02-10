@@ -220,5 +220,5 @@ Merge Sort는 항상 O(n log n)을 보장하고 안정 정렬이지만 O(n)의 �
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Algorithm/algorithm_sort.md`
+- 링크: [algorithm_sort.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Algorithm/algorithm_sort.md)
 - 내용: 정렬 알고리즘 종류, 시간복잡도

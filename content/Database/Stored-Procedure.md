@@ -381,7 +381,7 @@ IN은 값 전달만 가능하며 원본 값은 유지됩니다. OUT은 값 반�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_stored_procedure.md`
+- 링크: [db_stored_procedure.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_stored_procedure.md)
 - 내용: 저장 프로시저 개념, 작동 방식, 장단점, 문법
 
 ### 추가 학습 자료

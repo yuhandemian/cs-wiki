@@ -166,7 +166,7 @@ Cascadeless Schedule은 commit되지 않은 write 데이터를 읽지 않지만,
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_transaction_concurrency-control.md`
+- 링크: [db_transaction_concurrency-control.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_transaction_concurrency-control.md)
 - 내용: Concurrency Control, Serializability, Recoverability
 
 ### 추가 학습 자료

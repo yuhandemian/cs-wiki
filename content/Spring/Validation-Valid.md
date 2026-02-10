@@ -330,7 +330,7 @@ DTO 검증은 Controller 단에서 잘못된 요청을 빠르게 차단할 수 �
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/spring/spring_@valid.md`
+- 링크: [spring_@valid.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Spring/spring_@valid.md)
 - 내용: Bean Validation, @Valid, Annotation 종류, 테스트
 
 ### 추가 학습 자료

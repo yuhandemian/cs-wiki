@@ -269,7 +269,7 @@ Segmentation은 추가적인 하드웨어 지원을 통해 주소 공간 사이�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_segmentation.md`
+- 파일: [os_segmentation.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_segmentation.md)
 - 내용: Segmentation, 주소 변환, 외부 단편화
 
 ### 추가 학습 자료

@@ -306,7 +306,7 @@ Java는 참조형 변수를 전달할 때 주소 값을 복사하여 전달합�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_call_by_value.md`
+- 링크: [java_call_by_value.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_call_by_value.md)
 - 내용: Call by Value, Call by Reference, Java 데이터 타입
 
 ### 추가 학습 자료

@@ -280,7 +280,7 @@ Pool size를 고정하기 위함입니다. minimumIdle을 maximumPoolSize보다 
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_connection_pool.md`
+- 링크: [db_connection_pool.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_connection_pool.md)
 - 내용: DB Connection, JDBC, Connection Pool, HikariCP
 
 ### 추가 학습 자료

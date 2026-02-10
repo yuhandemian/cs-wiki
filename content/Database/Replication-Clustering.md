@@ -395,7 +395,7 @@ Galera Clustering은 모든 노드가 마스터로 작동하며 동기 방식으
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_rdb_nosql_replication_and_clustering.md`
+- 링크: [db_rdb_nosql_replication_and_clustering.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_rdb_nosql_replication_and_clustering.md)
 - 내용: Clustering, Replication, Sharding, MySQL, MongoDB
 
 ### 추가 학습 자료

@@ -399,7 +399,7 @@ SecurityContextHolder는 현재 보안 컨텍스트의 세부 정보를 저장�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/spring/spring_security.md`
+- 링크: [spring_security.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Spring/spring_security.md)
 - 내용: Spring Security, 인증/인가, Filter Chain
 
 ### 추가 학습 자료

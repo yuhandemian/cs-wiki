@@ -249,7 +249,7 @@ BFS는 각 층을 탐색할 때 그 층에 있는 모든 노드의 자식 노드
 - 내용: BFS, DFS, 트리 탐색
 
 ### 출처 2: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Algorithm/algorithm_brute_force_search.md`
+- 링크: [algorithm_brute_force_search.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Algorithm/algorithm_brute_force_search.md)
 - 내용: 완전 탐색, BFS/DFS 활용
 
 ### 추가 학습 자료

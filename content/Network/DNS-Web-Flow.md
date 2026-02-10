@@ -292,7 +292,7 @@ DNS는 도메인 이름을 IP 주소로 변환해주는 시스템입니다. 사�
 ## 📚 원본 참고 자료
 
 ### 출처 1: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Network/network_dns_and_network_flow.md`
+- 링크: [network_dns_and_network_flow.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_dns_and_network_flow.md)
 - 내용: DNS 구조, DNS Query, 웹 통신 흐름, 웹 서버/WAS
 
 ### 출처 2: backend-interview-question

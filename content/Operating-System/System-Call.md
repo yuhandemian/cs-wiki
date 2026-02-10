@@ -334,7 +334,7 @@ C/C++ 같은 고급 언어는 직접 시스템 콜을 할 수 없고, 각 운영
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_system_call.md`
+- 파일: [os_system_call.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_system_call.md)
 - 내용: 운영체제, 커널, Dual Mode, 시스템 콜
 
 ### 추가 학습 자료

@@ -253,7 +253,7 @@ SOAP는 금융 거래, 의료 정보 시스템, 정부 서비스 등 높은 보�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/network/network_soap.md`
+- 링크: [network_soap.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_soap.md)
 - 내용: SOAP, WSDL, UDDI, REST 비교
 
 ### 추가 학습 자료

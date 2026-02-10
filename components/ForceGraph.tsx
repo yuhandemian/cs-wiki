@@ -78,7 +78,12 @@ export default function ForceGraph() {
                 .distance(80))
             .force('charge', d3.forceManyBody().strength(-200))
             .force('center', d3.forceCenter(width / 2, height / 2))
-            .force('collision', d3.forceCollide().radius(30));
+            .force('collision', d3.forceCollide().radius(30))
+            .force('category', d3.forceRadial<GraphNode>(
+                (d) => selectedCategory ? 0 : 200,
+                width / 2,
+                height / 2
+            ).strength(d => selectedCategory && d.category === selectedCategory ? 0.5 : 0));
 
         const link = g.append('g')
             .selectAll('line')
@@ -147,7 +152,42 @@ export default function ForceGraph() {
                 .attr('y', d => d.y!);
         });
 
-        svg.call(zoom.transform, d3.zoomIdentity.translate(width / 4, height / 4).scale(0.8));
+        if (selectedCategory) {
+            simulation.on('end', () => {
+                const categoryNodes = filteredNodes.filter(n => n.category === selectedCategory);
+                if (categoryNodes.length === 0) return;
+
+                const bounds = {
+                    minX: d3.min(categoryNodes, d => d.x!) || 0,
+                    maxX: d3.max(categoryNodes, d => d.x!) || 0,
+                    minY: d3.min(categoryNodes, d => d.y!) || 0,
+                    maxY: d3.max(categoryNodes, d => d.y!) || 0
+                };
+
+                const boundsWidth = bounds.maxX - bounds.minX;
+                const boundsHeight = bounds.maxY - bounds.minY;
+                const centerX = (bounds.minX + bounds.maxX) / 2;
+                const centerY = (bounds.minY + bounds.maxY) / 2;
+
+                const scale = Math.min(
+                    width / (boundsWidth + 200),
+                    height / (boundsHeight + 200),
+                    2
+                );
+
+                svg.transition()
+                    .duration(750)
+                    .call(
+                        zoom.transform,
+                        d3.zoomIdentity
+                            .translate(width / 2, height / 2)
+                            .scale(scale)
+                            .translate(-centerX, -centerY)
+                    );
+            });
+        } else {
+            svg.call(zoom.transform, d3.zoomIdentity.translate(width / 4, height / 4).scale(0.8));
+        }
 
         return () => {
             simulation.stop();

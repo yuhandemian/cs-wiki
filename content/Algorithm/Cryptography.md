@@ -312,7 +312,7 @@ MDC는 변경 감지 코드로 메시지의 무결성만 보장하며, 원본 �
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/algorithm/algorithm_cryptography.md`
+- 링크: [algorithm_cryptography.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/algorithm/algorithm_cryptography.md)
 - 내용: 암호화 알고리즘, 대칭키, 비대칭키, 해시
 
 ### 추가 학습 자료

@@ -289,5 +289,5 @@ Future는 결과를 얻으려면 get()을 호출하여 잠시라도 블로킹 �
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_asynchronous.md`
+- 링크: [java_asynchronous.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_asynchronous.md)
 - 내용: 비동기 처리, Callback, Future, CompletableFuture

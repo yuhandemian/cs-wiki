@@ -287,7 +287,7 @@ CyclicBarrier는 모든 스레드가 await()를 호출하여 대기 상태가 �
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_countdownlatch_cyclicbarrier.md`
+- 링크: [java_countdownlatch_cyclicbarrier.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_countdownlatch_cyclicbarrier.md)
 - 내용: CountDownLatch, CyclicBarrier, 차이점
 
 ### 추가 학습 자료

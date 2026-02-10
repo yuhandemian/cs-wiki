@@ -279,7 +279,7 @@ ARP(Address Resolution Protocol)는 IP 주소를 통해 MAC 주소를 알려주�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Network/network_devices.md`
+- 링크: [network_devices.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_devices.md)
 - 내용: Network Devices, L2/L3/L4/L7 스위치, 라우터, 로드 밸런싱
 
 ### 추가 학습 자료

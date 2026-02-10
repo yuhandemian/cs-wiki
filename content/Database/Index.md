@@ -277,7 +277,7 @@ Multi Column Index는 컬럼 순서에 따라 정렬됩니다. INDEX(team_id, ba
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_index.md`
+- 링크: [db_index.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_index.md)
 - 내용: Index 개념, 자료구조, 설정 기준
 
 ### 추가 학습 자료

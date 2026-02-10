@@ -250,7 +250,7 @@ Time-Space Trade-off는 Multi-level Page Tables에서 발생하는 현상으로,
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_smaller_table.md`
+- 파일: [os_smaller_table.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_smaller_table.md)
 - 내용: Page Table 크기 줄이기, Multi-level Page Tables
 
 ### 추가 학습 자료

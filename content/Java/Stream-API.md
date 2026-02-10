@@ -342,5 +342,5 @@ parallelStream()은 스트림을 병렬로 처리하는 메소드입니다. 멀�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_stream_api.md`
+- 링크: [java_stream_api.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_stream_api.md)
 - 내용: Stream API, 중간/최종 연산, 생성 방법

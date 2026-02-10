@@ -322,7 +322,7 @@ MongoDB는 도큐먼트 기반 데이터베이스로 JSON을 통해 데이터에
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/DB/db_rdbms_and_nosql.md`
+- 링크: [db_rdbms_and_nosql.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Database/db_rdbms_and_nosql.md)
 - 내용: RDB, RDBMS, MySQL, PostgreSQL, Oracle, NoSQL, MongoDB, Redis
 
 ### 추가 학습 자료

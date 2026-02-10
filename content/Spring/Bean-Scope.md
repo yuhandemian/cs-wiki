@@ -285,7 +285,7 @@ Proxy 모드는 @Scope 어노테이션에 proxyMode 속성을 추가하여 설�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/spring/spring_bean_scope.md`
+- 링크: [spring_bean_scope.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Spring/spring_bean_scope.md)
 - 내용: Bean Scope, Singleton, Prototype, Proxy
 
 ### 추가 학습 자료

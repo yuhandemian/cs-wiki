@@ -212,5 +212,5 @@ tags:
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/network/network_topology.md`
+- 링크: [network_topology.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_topology.md)
 - 내용: Network Topology, 병목 현상, 스푸핑

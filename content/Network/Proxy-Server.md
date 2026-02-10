@@ -259,7 +259,7 @@ Proxy와 VPN의 기본적인 차이점은 보안 기능입니다. VPN은 보안 
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/Network/network_proxy_server.md`
+- 링크: [network_proxy_server.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Network/network_proxy_server.md)
 - 내용: Proxy Server, Forward/Reverse Proxy, 방화벽, 로드 밸런싱
 
 ### 추가 학습 자료

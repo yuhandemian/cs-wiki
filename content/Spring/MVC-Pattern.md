@@ -411,7 +411,7 @@ redirect는 클라이언트가 새로운 URL로 다시 요청하는 방식으로
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/spring/spring_03_mvc.md`
+- 링크: [spring_03_mvc.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Spring/spring_03_mvc.md)
 - 내용: MVC 패턴, redirect/forward, 구현 예시
 
 ### 추가 학습 자료

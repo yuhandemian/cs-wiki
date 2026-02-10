@@ -164,5 +164,5 @@ AOP(Aspect Oriented Programming, 관점 지향 프로그래밍)는 횡단 관심
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/spring/spring vs spring boot.md`
+- 링크: [spring vs spring boot.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Spring/spring%20vs%20spring%20boot.md)
 - 내용: Spring, Spring Boot, DI, IoC, AOP

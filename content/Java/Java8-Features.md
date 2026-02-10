@@ -378,7 +378,7 @@ isPresent()로 null 체크 후 get()으로 값을 가져오는 방식은 잘못�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/java/java_eight_characteristic.md`
+- 링크: [java_eight_characteristic.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/Java/java_eight_characteristic.md)
 - 내용: Java 8 특징, Lambda, Stream, Optional, JVM 변화
 
 ### 추가 학습 자료

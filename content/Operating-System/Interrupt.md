@@ -272,7 +272,7 @@ ISR은 인터럽트 핸들러라고도 하며 실제 인터럽트를 처리하�
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_interrupt.md`
+- 파일: [os_interrupt.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_interrupt.md)
 - 내용: Interrupt, 하드웨어/소프트웨어 인터럽트, ISR
 
 ### 추가 학습 자료

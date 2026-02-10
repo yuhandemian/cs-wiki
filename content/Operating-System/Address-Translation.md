@@ -179,7 +179,7 @@ MMU(Memory Management Unit)는 메모리 관리 장치로, CPU가 메모리에 �
 ## 📚 원본 참고 자료
 
 ### 출처: 2023-CS-Study
-- 파일: `/Users/PARK/Desktop/MyBook/2023-CS-Study/OS/os_address_traslation.md`
+- 파일: [os_address_traslation.md](https://github.com/devSquad-study/2023-CS-Study/blob/main/OS/os_address_traslation.md)
 - 내용: Address Translation, Base and Bounds Register, MMU
 
 ### 추가 학습 자료
