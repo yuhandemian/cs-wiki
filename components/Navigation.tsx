@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
@@ -105,6 +105,10 @@ function CategoryItem({
     defaultExpanded?: boolean;
 }) {
     const [isExpanded, setIsExpanded] = useState(defaultExpanded);
+
+    useEffect(() => {
+        setIsExpanded(defaultExpanded);
+    }, [defaultExpanded]);
 
     return (
         <div>
