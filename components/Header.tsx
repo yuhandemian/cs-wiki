@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Search from "./Search";
 
 export default function Header() {
     return (
@@ -8,6 +9,7 @@ export default function Header() {
                     <Link href="/" className="flex items-center gap-2">
                         <h1 className="text-xl font-bold">CS Wiki</h1>
                     </Link>
+                    <Search />
                 </div>
             </div>
         </header>

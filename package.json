@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-search-index.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -11,6 +12,7 @@
   "dependencies": {
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.563.0",
+    "lunr": "^2.3.9",
     "next": "16.1.6",
     "next-mdx-remote": "^5.0.0",
     "react": "19.2.3",
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/lunr": "^2.3.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
