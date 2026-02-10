@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generate-search-index.mjs",
+    "prebuild": "node scripts/generate-search-index.mjs && node scripts/generate-graph-data.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@types/d3": "^7.4.3",
+    "d3": "^7.9.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.563.0",
     "lunr": "^2.3.9",
