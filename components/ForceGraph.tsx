@@ -84,8 +84,8 @@ export default function ForceGraph() {
 
         const filteredNodeIds = new Set(filteredNodes.map(n => n.id));
         const filteredLinks = graphData.links.filter(l => {
-            const source = typeof l.source === 'object' ? l.source.id : l.source;
-            const target = typeof l.target === 'object' ? l.target.id : l.target;
+            const source = typeof l.source === 'object' ? l.source.id : String(l.source);
+            const target = typeof l.target === 'object' ? l.target.id : String(l.target);
             return filteredNodeIds.has(source) && filteredNodeIds.has(target);
         });
 
