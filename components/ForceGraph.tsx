@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import * as d3 from 'd3';
 import { useRouter } from 'next/navigation';
 
@@ -25,14 +25,47 @@ interface GraphData {
 export default function ForceGraph() {
     const svgRef = useRef<SVGSVGElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
+    const simulationRef = useRef<d3.Simulation<GraphNode, GraphLink> | null>(null);
     const [graphData, setGraphData] = useState<GraphData | null>(null);
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const [hoveredNode, setHoveredNode] = useState<GraphNode | null>(null);
+    const [nodes, setNodes] = useState<GraphNode[]>([]);
+    const [links, setLinks] = useState<GraphLink[]>([]);
+    const [transform, setTransform] = useState({ x: 0, y: 0, k: 0.8 });
+    const [isMobile, setIsMobile] = useState(false);
     const router = useRouter();
 
     useEffect(() => {
-        const basePath = process.env.NODE_ENV === 'production' ? '/cs-wiki' : '';
-        fetch(`${basePath}/graph-data.json`)
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 1024);
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    const animateTransform = useCallback((from: typeof transform, to: typeof transform, duration: number) => {
+        const startTime = Date.now();
+        const animate = () => {
+            const elapsed = Date.now() - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 0.5 - Math.cos(progress * Math.PI) / 2;
+
+            setTransform({
+                x: from.x + (to.x - from.x) * eased,
+                y: from.y + (to.y - from.y) * eased,
+                k: from.k + (to.k - from.k) * eased
+            });
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            }
+        };
+        animate();
+    }, []);
+
+    useEffect(() => {
+        fetch('/graph-data.json')
             .then(res => res.json())
             .then(setGraphData)
             .catch(console.error);
@@ -45,157 +78,122 @@ export default function ForceGraph() {
         const width = container.clientWidth;
         const height = container.clientHeight;
 
-        d3.select(svgRef.current).selectAll('*').remove();
-
-        const svg = d3.select(svgRef.current)
-            .attr('width', width)
-            .attr('height', height);
-
-        const g = svg.append('g');
-
-        const zoom = d3.zoom<SVGSVGElement, unknown>()
-            .scaleExtent([0.3, 4])
-            .on('zoom', (event) => {
-                g.attr('transform', event.transform);
-            });
-
-        svg.call(zoom);
-
         const filteredNodes = selectedCategory
             ? graphData.nodes.filter(n => n.category === selectedCategory)
             : graphData.nodes;
 
         const filteredNodeIds = new Set(filteredNodes.map(n => n.id));
         const filteredLinks = graphData.links.filter(l => {
-            const sourceId = typeof l.source === 'string' ? l.source : (l.source as GraphNode).id;
-            const targetId = typeof l.target === 'string' ? l.target : (l.target as GraphNode).id;
-            return filteredNodeIds.has(sourceId) && filteredNodeIds.has(targetId);
+            const source = typeof l.source === 'object' ? l.source.id : l.source;
+            const target = typeof l.target === 'object' ? l.target.id : l.target;
+            return filteredNodeIds.has(source) && filteredNodeIds.has(target);
         });
 
-        const simulation = d3.forceSimulation<GraphNode>(filteredNodes)
-            .force('link', d3.forceLink<GraphNode, GraphLink>(filteredLinks)
-                .id(d => d.id)
-                .distance(80))
-            .force('charge', d3.forceManyBody().strength(-200))
+        const nodesCopy = filteredNodes.map(n => ({ ...n }));
+        const linksCopy = filteredLinks.map(l => ({ ...l }));
+
+        const simulation = d3.forceSimulation<GraphNode>(nodesCopy)
+            .force('link', d3.forceLink<GraphNode, GraphLink>(linksCopy)
+                .id((d) => d.id)
+                .distance(120))
+            .force('charge', d3.forceManyBody().strength(-300))
             .force('center', d3.forceCenter(width / 2, height / 2))
-            .force('collision', d3.forceCollide().radius(30))
-            .force('category', d3.forceRadial<GraphNode>(
-                (d) => selectedCategory ? 0 : 200,
-                width / 2,
-                height / 2
-            ).strength(d => selectedCategory && d.category === selectedCategory ? 0.5 : 0));
+            .force('collision', d3.forceCollide().radius(40))
+            .alphaDecay(0.03)
+            .velocityDecay(0.4);
 
-        const link = g.append('g')
-            .selectAll('line')
-            .data(filteredLinks)
-            .join('line')
-            .attr('stroke', d => d.type === 'prerequisite' ? '#9333ea' : '#94a3b8')
-            .attr('stroke-opacity', 0.6)
-            .attr('stroke-width', d => d.type === 'prerequisite' ? 2 : 1)
-            .attr('stroke-dasharray', d => d.type === 'prerequisite' ? '5,5' : 'none');
-
-        const node = g.append('g')
-            .selectAll('circle')
-            .data(filteredNodes)
-            .join('circle')
-            .attr('r', 12)
-            .attr('fill', d => d.color)
-            .attr('stroke', '#fff')
-            .attr('stroke-width', 2)
-            .style('cursor', 'pointer')
-            .on('click', (_, d) => {
-                router.push(`/wiki/${d.category}/${d.slug}`);
-            })
-            .on('mouseenter', (_, d) => setHoveredNode(d))
-            .on('mouseleave', () => setHoveredNode(null));
-
-        (node as any).call(d3.drag<SVGCircleElement, GraphNode>()
-            .on('start', (event, d) => {
-                if (!event.active) simulation.alphaTarget(0.3).restart();
-                d.fx = d.x;
-                d.fy = d.y;
-            })
-            .on('drag', (event, d) => {
-                d.fx = event.x;
-                d.fy = event.y;
-            })
-            .on('end', (event, d) => {
-                if (!event.active) simulation.alphaTarget(0);
-                d.fx = null;
-                d.fy = null;
-            }));
-
-        const label = g.append('g')
-            .selectAll('text')
-            .data(filteredNodes)
-            .join('text')
-            .text(d => d.title.length > 15 ? d.title.slice(0, 15) + '...' : d.title)
-            .attr('font-size', 10)
-            .attr('dx', 15)
-            .attr('dy', 4)
-            .attr('fill', '#374151')
-            .style('pointer-events', 'none');
+        let tickCount = 0;
+        const maxTicks = 300;
 
         simulation.on('tick', () => {
-            link
-                .attr('x1', d => (d.source as GraphNode).x!)
-                .attr('y1', d => (d.source as GraphNode).y!)
-                .attr('x2', d => (d.target as GraphNode).x!)
-                .attr('y2', d => (d.target as GraphNode).y!);
-
-            node
-                .attr('cx', d => d.x!)
-                .attr('cy', d => d.y!);
-
-            label
-                .attr('x', d => d.x!)
-                .attr('y', d => d.y!);
+            tickCount++;
+            if (tickCount % 2 === 0) {
+                setNodes([...nodesCopy]);
+                setLinks([...linksCopy]);
+            }
+            if (tickCount >= maxTicks || simulation.alpha() < 0.01) {
+                simulation.stop();
+            }
         });
 
-        if (selectedCategory) {
-            simulation.on('end', () => {
-                const categoryNodes = filteredNodes.filter(n => n.category === selectedCategory);
-                if (categoryNodes.length === 0) return;
-
-                const bounds = {
-                    minX: d3.min(categoryNodes, d => d.x!) || 0,
-                    maxX: d3.max(categoryNodes, d => d.x!) || 0,
-                    minY: d3.min(categoryNodes, d => d.y!) || 0,
-                    maxY: d3.max(categoryNodes, d => d.y!) || 0
-                };
-
-                const boundsWidth = bounds.maxX - bounds.minX;
-                const boundsHeight = bounds.maxY - bounds.minY;
-                const centerX = (bounds.minX + bounds.maxX) / 2;
-                const centerY = (bounds.minY + bounds.maxY) / 2;
-
-                const scale = Math.min(
-                    width / (boundsWidth + 200),
-                    height / (boundsHeight + 200),
-                    2
-                );
-
-                svg.transition()
-                    .duration(750)
-                    .call(
-                        zoom.transform,
-                        d3.zoomIdentity
-                            .translate(width / 2, height / 2)
-                            .scale(scale)
-                            .translate(-centerX, -centerY)
-                    );
+        const svg = d3.select(svgRef.current);
+        const zoom = d3.zoom<SVGSVGElement, unknown>()
+            .scaleExtent([0.1, 4])
+            .on('zoom', (event) => {
+                setTransform({
+                    x: event.transform.x,
+                    y: event.transform.y,
+                    k: event.transform.k
+                });
             });
-        } else {
-            svg.call(zoom.transform, d3.zoomIdentity.translate(width / 4, height / 4).scale(0.8));
-        }
+
+        svg.call(zoom);
+        svg.call(zoom.transform, d3.zoomIdentity.translate(width / 2, height / 2).scale(0.8).translate(-width / 2, -height / 2));
+
+        simulationRef.current = simulation;
 
         return () => {
             simulation.stop();
         };
-    }, [graphData, selectedCategory, router]);
+    }, [graphData, selectedCategory]);
+
+    const handleNodeClick = useCallback((node: GraphNode) => {
+        router.push(`/wiki/${node.category}/${node.slug}`);
+    }, [router]);
+
+    const handleNodeMouseEnter = useCallback((node: GraphNode) => {
+        setHoveredNode(node);
+    }, []);
+
+    const handleNodeMouseLeave = useCallback(() => {
+        setHoveredNode(null);
+    }, []);
 
     if (!graphData) {
         return <div className="flex items-center justify-center h-full">Loading graph...</div>;
+    }
+
+    if (isMobile) {
+        return (
+            <div className="h-full flex flex-col">
+                <div className="p-8 text-center">
+                    <h2 className="text-2xl font-bold mb-4">Knowledge Graph</h2>
+                    <p className="text-gray-600 dark:text-gray-400 mb-6">
+                        그래프 뷰는 데스크톱에서 최적화되어 있습니다.
+                    </p>
+                    <div className="space-y-2">
+                        {graphData.categories.map(cat => {
+                            const categoryNodes = graphData.nodes.filter(n => n.category === cat.id);
+                            return (
+                                <div key={cat.id} className="border rounded-lg p-4 bg-white dark:bg-gray-800">
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <span className="w-3 h-3 rounded-full" style={{ backgroundColor: cat.color }} />
+                                        <h3 className="font-semibold text-lg">{cat.name}</h3>
+                                        <span className="text-sm text-gray-500">({categoryNodes.length})</span>
+                                    </div>
+                                    <div className="flex flex-wrap gap-2">
+                                        {categoryNodes.slice(0, 10).map(node => (
+                                            <button
+                                                key={node.id}
+                                                onClick={() => router.push(`/wiki/${node.category}/${node.slug}`)}
+                                                className="px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600"
+                                            >
+                                                {node.title}
+                                            </button>
+                                        ))}
+                                        {categoryNodes.length > 10 && (
+                                            <span className="px-3 py-1 text-sm text-gray-500">
+                                                +{categoryNodes.length - 10} more
+                                            </span>
+                                        )}
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </div>
+        );
     }
 
     return (
@@ -220,7 +218,60 @@ export default function ForceGraph() {
                 ))}
             </div>
             <div ref={containerRef} className="flex-1 relative bg-gray-50 dark:bg-gray-800">
-                <svg ref={svgRef} className="w-full h-full" />
+                <svg ref={svgRef} className="w-full h-full">
+                    <g transform={`translate(${transform.x},${transform.y}) scale(${transform.k})`}>
+                        <g>
+                            {links.map((link, i) => {
+                                const source = link.source as GraphNode;
+                                const target = link.target as GraphNode;
+                                if (!source.x || !source.y || !target.x || !target.y) return null;
+                                return (
+                                    <line
+                                        key={i}
+                                        x1={source.x}
+                                        y1={source.y}
+                                        x2={target.x}
+                                        y2={target.y}
+                                        stroke={link.type === 'prerequisite' ? '#9333ea' : '#94a3b8'}
+                                        strokeOpacity={0.6}
+                                        strokeWidth={link.type === 'prerequisite' ? 2 : 1}
+                                        strokeDasharray={link.type === 'prerequisite' ? '5,5' : 'none'}
+                                    />
+                                );
+                            })}
+                        </g>
+                        <g>
+                            {nodes.map((node) => {
+                                if (!node.x || !node.y) return null;
+                                return (
+                                    <g key={node.id}>
+                                        <circle
+                                            cx={node.x}
+                                            cy={node.y}
+                                            r={12}
+                                            fill={node.color}
+                                            stroke="#fff"
+                                            strokeWidth={2}
+                                            style={{ cursor: 'pointer' }}
+                                            onClick={() => handleNodeClick(node)}
+                                            onMouseEnter={() => handleNodeMouseEnter(node)}
+                                            onMouseLeave={handleNodeMouseLeave}
+                                        />
+                                        <text
+                                            x={node.x + 15}
+                                            y={node.y + 4}
+                                            fontSize={10}
+                                            fill="#374151"
+                                            pointerEvents="none"
+                                        >
+                                            {node.title.length > 15 ? node.title.slice(0, 15) + '...' : node.title}
+                                        </text>
+                                    </g>
+                                );
+                            })}
+                        </g>
+                    </g>
+                </svg>
                 {hoveredNode && (
                     <div className="absolute top-4 left-4 bg-white dark:bg-gray-900 p-3 rounded-lg shadow-lg border">
                         <div className="font-semibold">{hoveredNode.title}</div>

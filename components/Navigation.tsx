@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
+import { ChevronDown, ChevronRight, ChevronLeft, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const categories = [
@@ -28,7 +28,7 @@ export default function Navigation() {
     useEffect(() => {
         document.documentElement.style.setProperty(
             '--sidebar-width', 
-            isSidebarOpen ? '256px' : '0px'
+            isSidebarOpen ? '256px' : '64px'
         );
     }, [isSidebarOpen]);
 
@@ -46,24 +46,38 @@ export default function Navigation() {
             <aside
                 className={`
                     fixed top-0 left-0 h-screen bg-gray-50 dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800
-                    transition-all duration-300 ease-in-out z-40 overflow-y-auto
+                    transition-all duration-300 ease-in-out z-40 overflow-hidden
                     ${isMobileOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
-                    ${isSidebarOpen ? 'md:w-64' : 'md:w-0 md:border-0'}
+                    ${isSidebarOpen ? 'md:w-64' : 'md:w-16'}
                 `}
             >
-                <div className={`w-64 p-6 pt-16 md:pt-6 transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100' : 'md:opacity-0'}`}>
+                {/* 접힌 사이드바의 펼치기 버튼 */}
+                {!isSidebarOpen && (
+                    <div className="hidden md:block pt-6 px-3">
+                        <button
+                            onClick={() => setIsSidebarOpen(true)}
+                            className="p-2 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                            title="사이드바 표시"
+                        >
+                            <Menu size={20} />
+                        </button>
+                    </div>
+                )}
+
+                {/* 사이드바 컨텐츠 */}
+                <div className={`w-64 p-6 pt-16 md:pt-6 transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100' : 'md:opacity-0 md:pointer-events-none'}`}>
                     <div className="flex items-center justify-between mb-8">
                         <Link href="/" className="block" onClick={() => setIsMobileOpen(false)}>
                             <h1 className="text-2xl font-bold">CS Wiki</h1>
                         </Link>
                         
-                        {/* 데스크톱 토글 버튼 */}
+                        {/* 데스크톱 닫기 버튼 */}
                         <button
-                            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                            onClick={() => setIsSidebarOpen(false)}
                             className="hidden md:block p-2 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors"
-                            title={isSidebarOpen ? "사이드바 숨기기" : "사이드바 표시"}
+                            title="사이드바 숨기기"
                         >
-                            <Menu size={20} />
+                            <ChevronLeft size={20} />
                         </button>
                     </div>
 
