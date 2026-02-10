@@ -2,11 +2,20 @@ import { getDocumentsByCategory, getAllCategories } from '@/lib/mdx';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-// 정적 빌드를 위한 경로 생성
+const categoryDirToSlug: Record<string, string> = {
+    'Algorithm': 'algorithm',
+    'Data-Structure': 'data-structure',
+    'Database': 'database',
+    'Java': 'java',
+    'Network': 'network',
+    'Operating-System': 'operating-system',
+    'Spring': 'spring',
+};
+
 export async function generateStaticParams() {
     const categories = getAllCategories();
-    return categories.map((category) => ({
-        category: category,
+    return categories.map((categoryDir) => ({
+        category: categoryDirToSlug[categoryDir] || categoryDir.toLowerCase(),
     }));
 }
 
