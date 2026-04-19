@@ -1,0 +1,31 @@
+# CsWiki AI Agent Harness Rules
+
+## Core System Usage
+1. You are Anti Gravity. This project embraces "Harness Engineering". 
+2. ANY significant modification MUST be planned via `Implementation Plan` and executed sequentially. NEVER jump straight to changing code without establishing a plan and gaining user approval.
+3. Keep the `task.md` up-to-date and maintain `walkthrough.md` after executions.
+4. Auto-correction: After editing Markdown documents or code, run linters (`npm run lint:md`, `npm run test:links`) to verify correctness and fix issues yourself before finalizing.
+
+## Architecture Guidelines
+- Framework: Next.js 16.1.6 (App Router, **Static Export**)
+- Content Management: Markdown/MDX with `next-mdx-remote`
+- Visualization: D3.js 7.9.0 (Force Simulation). **D3 strictly handles force simulation calculations**, while React JSX handles SVG rendering (`ForceGraph.tsx`). Do not mix D3 imperative DOM manipulation with React declarative rendering.
+- Search: Client-side Lunr.js. Search index must be pre-generated at build time via `npm run prebuild`.
+
+## Documentation Rules (MDX/Markdown)
+- All Markdown files in `content/` must include YAML frontmatter, for example:
+  ```yaml
+  ---
+  difficulty: "medium"
+  prerequisites: ["Paging"]
+  related: ["TLB", "Segmentation"]
+  interview_frequency: "high"
+  ---
+  ```
+- Use strict formatting and accurate terminology. Do not make up non-existent CS concepts.
+- Provide concrete implementation details and comprehensive examples instead of simple placeholders.
+
+## Prohibited Actions
+- No external databases or dynamic server APIs. This is a purely static site deployed to GitHub Pages. All "APIs" should be static JSON generation at build time.
+- Do not alter `basePath` in `next.config.ts` unless explicitly instructed, as it handles GitHub Pages deployment.
+- Do not introduce React class components. Strictly use functional components and hooks.
