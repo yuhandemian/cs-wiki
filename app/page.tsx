@@ -15,16 +15,6 @@ export default function Home() {
         <div className="max-w-2xl mx-auto mb-6">
           <Search />
         </div>
-
-        <Link 
-          href="/graph"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-          </svg>
-          개념 그래프 보기
-        </Link>
       </div>
 
       <div className="px-4 pb-16">
@@ -82,7 +72,7 @@ export default function Home() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-grid grid-cols-3 gap-8 text-center">
+          <div className="inline-grid grid-cols-2 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-blue-600">97</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">문서</div>
@@ -90,10 +80,6 @@ export default function Home() {
             <div>
               <div className="text-4xl font-bold text-blue-600">7</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">카테고리</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600">104</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">연결</div>
             </div>
           </div>
         </div>

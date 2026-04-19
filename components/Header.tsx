@@ -10,9 +10,6 @@ export default function Header() {
                         <Link href="/" className="flex items-center gap-2">
                             <h1 className="text-xl font-bold">CS Wiki</h1>
                         </Link>
-                        <Link href="/graph" className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-                            Graph
-                        </Link>
                     </div>
                     <Search />
                 </div>

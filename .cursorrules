@@ -9,7 +9,6 @@
 ## Architecture Guidelines
 - Framework: Next.js 16.1.6 (App Router, **Static Export**)
 - Content Management: Markdown/MDX with `next-mdx-remote`
-- Visualization: D3.js 7.9.0 (Force Simulation). **D3 strictly handles force simulation calculations**, while React JSX handles SVG rendering (`ForceGraph.tsx`). Do not mix D3 imperative DOM manipulation with React declarative rendering.
 - Search: Client-side Lunr.js. Search index must be pre-generated at build time via `npm run prebuild`.
 
 ## Documentation Rules (MDX/Markdown)
